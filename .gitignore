@@ -22,4 +22,4 @@ project/plugins/project/
 
 .DS_Store
 
-data
+data/rabbitmq
