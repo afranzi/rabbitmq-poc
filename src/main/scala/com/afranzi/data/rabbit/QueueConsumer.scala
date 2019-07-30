@@ -1,15 +1,11 @@
-/*
- * Copyright (c) 2019 Telefonica Innovacion Alpha. All rights reserved.
- */
-
-package com.wingmanalpha.data.rabbit
+package com.afranzi.data.rabbit
 
 import java.time.temporal.ChronoUnit.MILLIS
 import java.time.{Clock, LocalDateTime}
 
+import com.afranzi.data.rabbit.Utils.{genericCancelCallback, getHeader}
 import com.rabbitmq.client.AMQP.BasicProperties
 import com.rabbitmq.client.{Channel, DeliverCallback, Delivery}
-import com.wingmanalpha.data.rabbit.Utils.{genericCancelCallback, getHeader}
 
 import scala.collection.JavaConversions._
 

@@ -1,4 +1,4 @@
-organization := "com.wingmanalpha.data"
+organization := "com.afranzi.data"
 name := "rabbit-mq"
 description := "RabbitMQ PoCs"
 homepage := Some(url("https://github.com/afranzi/rabbitmq-poc"))

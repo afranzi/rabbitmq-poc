@@ -3,15 +3,7 @@ import scalariform.formatter.preferences._
 // Set autoAPIMappings for sbt to tell scaladoc where it can find the API documentation for managed dependencies
 autoAPIMappings := true
 
-lazy val artifactoryRealm = "telefonicainnovationalpha.jfrog.io"
-lazy val artifactorySbtRealm = "https://telefonicainnovationalpha.jfrog.io/telefonicainnovationalpha/health-sbt/"
-lazy val artifactoryUser: String = sys.env("ARTIFACTORY_USER")
-lazy val artifactoryToken: String = sys.env("ARTIFACTORY_TOKEN")
-
-credentials += Credentials("Artifactory Realm", artifactoryRealm, artifactoryUser, artifactoryToken)
-
 resolvers += Resolver.jcenterRepo
-resolvers += "Artifactory" at artifactorySbtRealm
 
 // SBT Resolver plugin
 Revolver.settings
@@ -83,5 +75,3 @@ artifact in(Compile, assembly) := {
 }
 
 addArtifact(artifact in(Compile, assembly), assembly)
-
-publishTo := Some("Artifactory Realm" at artifactorySbtRealm)

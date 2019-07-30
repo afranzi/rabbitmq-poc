@@ -1,8 +1,4 @@
-/*
- * Copyright (c) 2019 Telefonica Innovacion Alpha. All rights reserved.
- */
-
-package com.wingmanalpha.data.rabbit.tutorial
+package com.afranzi.data.rabbit.tutorial
 
 import com.rabbitmq.client.{Channel, Connection}
 

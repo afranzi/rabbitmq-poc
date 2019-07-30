@@ -1,13 +1,9 @@
-/*
- * Copyright (c) 2019 Telefonica Innovacion Alpha. All rights reserved.
- */
-
-package com.wingmanalpha.data.rabbit
+package com.afranzi.data.rabbit
 
 import java.time.Clock
 
+import com.afranzi.data.rabbit.tutorial.RabbitMQClient
 import com.rabbitmq.client._
-import com.wingmanalpha.data.rabbit.tutorial.RabbitMQClient
 
 object NotificationConsumer extends App with NotificationsConfig {
 

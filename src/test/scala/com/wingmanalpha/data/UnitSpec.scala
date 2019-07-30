@@ -1,4 +1,4 @@
-package com.wingmanalpha.data
+package com.afranzi.data
 
 import org.scalatest.{FlatSpec, Inspectors, Matchers, OptionValues}
 
