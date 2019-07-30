@@ -1,5 +1,5 @@
 # RabbitMQ-PoC
-
+This PoC aims to investigate how to handle a notification system using RabbitMQ and delayed/expired queues.
 
 ## Run
 
@@ -9,6 +9,9 @@ sbt 'set test in assembly := {}' clean assembly
 
 # Execute NotificationScheduler
 java -cp target/scala-2.11/rabbit-mq-assembly-0.0.1-SNAPSHOT.jar  com.afranzi.data.rabbit.NotificationScheduler
+
+# Execute NotificationDelayer using the Delayed Message Exchange Plugin
+java -cp target/scala-2.11/rabbit-mq-assembly-0.0.1-SNAPSHOT.jar  com.afranzi.data.rabbit.NotificationDelayer
 
 # Execute NotificationConsumer
 java -cp target/scala-2.11/rabbit-mq-assembly-0.0.1-SNAPSHOT.jar  com.afranzi.data.rabbit.NotificationConsumer

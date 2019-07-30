@@ -3,7 +3,7 @@ package com.afranzi.data.rabbit
 import java.time.temporal.ChronoUnit.MILLIS
 import java.time.{Clock, LocalDateTime}
 
-import com.afranzi.data.rabbit.Utils.{genericCancelCallback, getHeader}
+import com.afranzi.data.rabbit.Utils._
 import com.rabbitmq.client.AMQP.BasicProperties
 import com.rabbitmq.client.{Channel, DeliverCallback, Delivery}
 
