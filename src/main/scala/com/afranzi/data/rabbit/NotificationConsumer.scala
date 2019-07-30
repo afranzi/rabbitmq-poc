@@ -16,6 +16,7 @@ object NotificationConsumer extends App with NotificationsConfig {
     declareQueues
     channel.basicQos(1000)
     channel.queueBind(NotificationsToSend, NotificationsReady, "#")
+    channel.queueBind(NotificationsToSend, NotificationsExchangeDelay, "#")
 
     val queueConsumer = new QueueConsumer
     queueConsumer.consumeQueue(NotificationsToSend)

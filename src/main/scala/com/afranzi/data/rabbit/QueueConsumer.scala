@@ -22,7 +22,7 @@ class QueueConsumer(implicit clock: Clock) {
         val now = LocalDateTime.now()
         val delay = MILLIS.between(expectedTime, now)
 
-        println(s" [x] Received - [$message] - Now[$now] - Delay[${delay}ms] - Times-Seen[${getHeader("times-seen", headers)}]")
+        println(s" [x] Received - '$message' - with a delay of [${delay}ms]")
 
         val deliveryTag = delivery.getEnvelope.getDeliveryTag
         channel.basicAck(deliveryTag, false)
